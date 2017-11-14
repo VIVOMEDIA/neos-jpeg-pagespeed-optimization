@@ -1,5 +1,5 @@
 {
-    "name": "vivomedia-neos/jpeg-pagespeed-optimization",
+    "name": "vivomedia/neos-jpeg-pagespeed-optimization",
     "type": "neos-package",
     "description": "Neos CMS optimization of JPEGs for Google PageSpeed",
     "require": {
