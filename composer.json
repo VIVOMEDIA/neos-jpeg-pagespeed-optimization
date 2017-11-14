@@ -1,5 +1,5 @@
 {
-    "name": "vivomedia-neos/jpeg-pagespeed-optimization",
+    "name": "vivomedia/neos-jpeg-pagespeed-optimization",
     "type": "typo3-flow-package",
     "description": "Neos CMS optimization of JPEGs for Google PageSpeed",
     "require": {
