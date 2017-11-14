@@ -2,6 +2,7 @@
     "name": "vivomedia/neos-jpeg-pagespeed-optimization",
     "type": "neos-package",
     "description": "Neos CMS optimization of JPEGs for Google PageSpeed",
+    "license": "MIT",
     "require": {
         "neos/neos": ">=3.0"
     },
