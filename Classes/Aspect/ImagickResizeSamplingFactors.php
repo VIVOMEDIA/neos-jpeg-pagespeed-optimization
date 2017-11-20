@@ -1,6 +1,7 @@
 <?php
 namespace VIVOMEDIA\GooglePageSpeed\JpegOptimization\Aspect;
 
+use Imagine\Image\ImagineInterface;
 use TYPO3\Flow\Annotations as FLOW;
 
 /**
@@ -9,15 +10,36 @@ use TYPO3\Flow\Annotations as FLOW;
 class ImagickResizeSamplingFactors {
 
     /**
+     * @var ImagineInterface
+     * @Flow\Inject(lazy = false)
+     */
+    protected $imagineService;
+
+    /**
      *
      *
-     * @Flow\Before("setting(TYPO3.Imagine.driver='Imagick') && method(TYPO3\Media\Domain\Model\Adjustment\ResizeImageAdjustment->resize())")
+     * @Flow\AfterReturning("setting(TYPO3.Imagine.driver='Imagick') && method(TYPO3\Media\Domain\Model\Thumbnail->refresh())")
      */
 
     public function setImageSamplingFactors(\TYPO3\Flow\Aop\JoinPointInterface $joinPoint)
     {
-        $image = $joinPoint->getMethodArgument('image');
-        $image->getImagick()->setSamplingFactors(['2x2','1x1','1x1']);
-        $joinPoint->setMethodArgument('image', $image);
+        /** @var \TYPO3\Media\Domain\Model\Thumbnail $thumbnail */
+        $thumbnail = $joinPoint->getProxy();
+        $thumbnailResource = $thumbnail->getResource();
+        if (!$thumbnailResource) {
+            return;
+        }
+
+        $streamMetaData = stream_get_meta_data($thumbnailResource->getStream());
+        $pathAndFilename = $streamMetaData['uri'];
+
+        $imageType = $thumbnailResource->getMediaType();
+        switch ($imageType) {
+            case 'image/jpeg':
+                $imagineImage = $this->imagineService->open($pathAndFilename);
+                $imagineImage->getImagick()->setSamplingFactors(['2x2','1x1','1x1']);
+                $imagineImage->save();
+            break;
+        }
     }
 }
