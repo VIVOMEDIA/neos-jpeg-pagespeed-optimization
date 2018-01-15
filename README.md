@@ -19,11 +19,22 @@ Install with composer
 composer require vivomedia/neos-jpeg-pagespeed-optimization 
 ```
 
-If you want to change all already created images you have to clear all thumbnails and the cache.
+If you want to change all already created images, you have to clear all thumbnails and the cache.
 ```
 ./flow media:clearthumbnails
 ./flow flow:cache:flush --force
 ```
+
+## Configuration
+
+If you want to disable the image optimization in development context, you can set up following configuration in your `/Configuration/Development/Settings.yaml`
+
+```
+VIVOMEDIA:
+  GoogleAnalytics:
+    JpegPagespeedOptimization:
+      enabled: false
+``` 
 
 ## TODO
 
