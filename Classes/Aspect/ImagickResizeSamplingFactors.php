@@ -18,7 +18,7 @@ class ImagickResizeSamplingFactors {
     /**
      *
      *
-     * @Flow\AfterReturning("setting(Neos.Imagine.driver='Imagick') && setting(VIVOMEDIA.GoogleAnalytics.JpegPagespeedOptimization.enabled) && method(Neos\Media\Domain\Model\Thumbnail->refresh())")
+     * @Flow\AfterReturning("setting(Neos.Imagine.driver='Imagick') && setting(VIVOMEDIA.GooglePageSpeed.JpegOptimization.enabled) && method(Neos\Media\Domain\Model\Thumbnail->refresh())")
      */
 
     public function setImageSamplingFactors(\Neos\Flow\Aop\JoinPointInterface $joinPoint)

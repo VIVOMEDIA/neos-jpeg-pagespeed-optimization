@@ -31,8 +31,8 @@ If you want to disable the image optimization in development context, you can se
 
 ```
 VIVOMEDIA:
-  GoogleAnalytics:
-    JpegPagespeedOptimization:
+  GooglePageSpeed:
+    JpegOptimization:
       enabled: false
 ``` 
 
