@@ -3,6 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/vivomedia/neos-jpeg-pagespeed-optimization/v/stable)](https://packagist.org/packages/vivomedia/neos-jpeg-pagespeed-optimization)
 [![Total Downloads](https://poser.pugx.org/vivomedia/neos-jpeg-pagespeed-optimization/downloads)](https://packagist.org/packages/vivomedia/neos-jpeg-pagespeed-optimization)
 [![License](https://poser.pugx.org/vivomedia/neos-jpeg-pagespeed-optimization/license)](https://packagist.org/packages/vivomedia/neos-jpeg-pagespeed-optimization)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b826947e599da98c2bda/maintainability)](https://codeclimate.com/github/vivomedia-de/neos-jpeg-pagespeed-optimization/maintainability)
 
 As [Google PageSpeed docs](https://developers.google.com/speed/docs/insights/OptimizeImages?hl=en) suggests to increase the Google PageSpeed, this Neos CMS plugin changes the sampling factor of images to 4:2:0 while resizing.
 
