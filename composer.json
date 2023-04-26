@@ -98,7 +98,12 @@
             "Neos.Flow-20201207104500",
             "Neos.Neos-20220318111600",
             "Neos.Flow-20220318174300",
-            "Neos.Fusion-20220326120900"
+            "Neos.Fusion-20220326120900",
+            "Neos.Neos-20230801154834",
+            "Neos.Workspace.Ui-20240603134000",
+            "Neos.Neos-20251005080230",
+            "Neos.Fusion-20251006080506",
+            "Neos.Neos-20251109115127"
         ]
     }
 }
