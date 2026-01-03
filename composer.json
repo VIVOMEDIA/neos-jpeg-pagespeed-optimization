@@ -4,7 +4,7 @@
     "description": "Neos CMS optimization of JPEGs for Google PageSpeed",
     "license": "MIT",
     "require": {
-        "neos/neos": ">=3.0"
+        "neos/neos": "^8.0 || ^9.0"
     },
     "autoload": {
         "psr-4": {
